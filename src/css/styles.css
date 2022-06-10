@@ -12,22 +12,34 @@ body {
   line-height: 1.5;
 }
 
-ul {
+li {
   list-style: none;
 }
-li {
+ul {
+  padding: 0;
+  margin-left: 20px;
+}
+
+.item {
   display: flex;
   align-items: center;
 }
-img {
+
+.img {
   width: 25px;
   height: 25px;
   margin-right: 10px;
 }
 
-p {
+.p {
   font-size: 20px;
   line-height: 0.5;
+}
+
+.div-first {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
 }
 
 #search-box {
