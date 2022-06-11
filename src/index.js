@@ -16,16 +16,16 @@ refs.searchBox.addEventListener('input', debounce(onInputFoo, DEBOUNCE_DELAY));
 function onInputFoo(evt) {
   evt.preventDefault();
   const text = evt.target.value.trim();
-
+  if (!text) return;
   fetchCountries(text)
     .then(response => {
       innerClear();
       renderContent(response);
     })
     .catch(error => {
-      if (text !== '') {
-        Notiflix.Report.failure('Oops, there is no country with that name.');
-      }
+      // if (text !== '') {
+      Notiflix.Report.failure('Oops, there is no country with that name.');
+      // }
       innerClear();
     });
 }
